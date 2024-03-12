@@ -60,9 +60,13 @@ Here are some differneces between them:
 <tr>
 <td> Parameter Size </td>
 <td> 
-<div markdown="1">```addl $0x24, %esp
+<div markdown="1">
+```asm
+addl $0x24, %esp
 movsql %ecx, %rax 
-paddd %xmm1, %xmm2```</div>
+paddd %xmm1, %xmm2
+```
+</div>
 <p>
 Mnemonics are suffixed with a letter depending on the size of the operands.</br> 
 q for qword, (64bits) <a href="https://www.hows.tech/2024/02/dword-vs-qword-what-is-difference.html#"> whats a word </a></br>

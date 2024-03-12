@@ -60,7 +60,7 @@ Here are some differneces between them:
 <tr>
 <td> Parameter Size </td>
 <td> 
-<div markdown="1">
+<div markdown="block">
 ```asm
 addl $0x24, %esp
 movsql %ecx, %rax 

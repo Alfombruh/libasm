@@ -54,8 +54,8 @@ Here are some differneces between them:
 </tr>
 <tr>
 <td> Parameter Order </td>
-<td> <code>movl $5, eax</code> </td>
-<td> <code>mov eax, 5</code> </td>
+<td><pre><code>movl $5, eax</code></pre></td>
+<td><pre><code>mov eax, 5</code></pre></td>
 </tr>
 <tr>
 <td> Parameter Size </td>
@@ -71,16 +71,16 @@ w for word (16bits)</br>
 b for byte (8bits)</br>
 </p>
 </td>
-<td> 
-<code>add esp, 24h
+<td>
+<pre><code>add esp, 24h
 movsxd rax, ecv
-paddd xmm2, xmm1</code>
+paddd xmm2, xmm1</code></pre>
 <p>
 The parameter size is decided in the register that is being used. For example:</br>
 <b>rax</b> is used to register a qword </br>
 <b>eax</b> is used to register a dword </br>
 <b>ax</b> is used to register a word </br>
-<b>al</b> is used to register a byte </br>
+<b>al</b> is used to register a byte </br></br>
 <a href="https://en.wikibooks.org/wiki/X86_Assembly/X86_Architecture"> </a>
 </p>
 </td>

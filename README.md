@@ -46,81 +46,79 @@ Well when you write code in assembly there are two main syntaxses you can use. Y
 Here are some differneces between them:
 
 <table>
-    <tr>
-        <th></th>
-        <th> AT&T </th>
-        <th> Intel </th>
-    </tr>
-    <tr>
-        <td> Parameter Order </td>
-        <td> <code>movl $5, eax</code> </td>
-        <td> <code>mov eax, 5</code> </td>
-    </tr>
-    <tr>
-        <td> Parameter Size </td>
-        <td> 
-<code> addl $0x24, %esp
+<tr>
+<th></th>
+<th> AT&T </th>
+<th> Intel </th>
+</tr>
+<tr>
+<td> Parameter Order </td>
+<td> <code>movl $5, eax</code> </td>
+<td> <code>mov eax, 5</code> </td>
+</tr>
+<tr>
+<td> Parameter Size </td>
+<td> 
+<code>addl $0x24, %esp
 movsql %ecx, %rax
 paddd %xmm1, %xmm2</code>
-            <p>
-                Mnemonics are suffixed with a letter depending on the size of the operands.</br> 
-                q for qword, (64bits) <a href="https://www.hows.tech/2024/02/dword-vs-qword-what-is-difference.html#"> whats a word </a></br>
-                l for dword (32bits)</br>
-                w for word (16bits)</br>
-                b for byte (8bits)</br>
-            </p>
-        </td>
-        <td> 
-            <code>
-                add esp, 24h</br>
-                movsxd rax, ecv</br>
-                paddd xmm2, xmm1</br>
-            </code>
-            <p>
-                The parameter size is decided in the register that is being used. For example:</br>
-                <b>rax</b> is used to register a qword </br>
-                <b>eax</b> is used to register a dword </br>
-                <b>ax</b> is used to register a word </br>
-                <b>al</b> is used to register a byte </br>
-                <a href="https://en.wikibooks.org/wiki/X86_Assembly/X86_Architecture"> </a>
-            </p>
-        </td>
-    </tr>
-    <tr>
-        <td>Sigils</td>
-        <td>
-            <p>
-                Immediate values are prefixed by <code>$</code> and registers are prefixed by <code>%</code>
-            </p>
-        </td>
-        <td>
-            <p>
-                The assembler automatically detects the type of symbols. Whether they are registers, constants, ...
-            </p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Effective Addresses
-        </td>
-        <td>
-            <code>
-                movl offset(%ebx, %ecx, 4), %eax
-            </code>
-            <p>
-                General syntax of DISP(BASE, INDEX, SCALE)
-            </p>
-        </td>
-        <td>
-            <code>
-                mov eax, [ebx, ecx*4 + offset]
-            </code>
-            <p>
-                Arithmetic Expressions are done in square brackets.</br>
-                Size keywords like byte (word), dword have to be used if the size cannot be determined by the operands.</br>
-            </p>
-        </td>
-    </tr>
+<p>
+Mnemonics are suffixed with a letter depending on the size of the operands.</br> 
+q for qword, (64bits) <a href="https://www.hows.tech/2024/02/dword-vs-qword-what-is-difference.html#"> whats a word </a></br>
+l for dword (32bits)</br>
+w for word (16bits)</br>
+b for byte (8bits)</br>
+</p>
+</td>
+<td> 
+<code>add esp, 24h
+movsxd rax, ecv
+paddd xmm2, xmm1</code>
+<p>
+The parameter size is decided in the register that is being used. For example:</br>
+<b>rax</b> is used to register a qword </br>
+<b>eax</b> is used to register a dword </br>
+<b>ax</b> is used to register a word </br>
+<b>al</b> is used to register a byte </br>
+<a href="https://en.wikibooks.org/wiki/X86_Assembly/X86_Architecture"> </a>
+</p>
+</td>
+</tr>
+<tr>
+<td>Sigils</td>
+<td>
+<p>
+Immediate values are prefixed by <code>$</code> and registers are prefixed by <code>%</code>
+</p>
+</td>
+<td>
+<p>
+The assembler automatically detects the type of symbols. Whether they are registers, constants, ...
+</p>
+</td>
+</tr>
+<tr>
+<td>
+Effective Addresses
+</td>
+<td>
+<code>
+movl offset(%ebx, %ecx, 4), %eax
+</code>
+<p>
+General syntax of DISP(BASE, INDEX, SCALE)
+</p>
+</td>
+<td>
+<code>
+mov eax, [ebx, ecx*4 + offset]
+</code>
+<p>
+Arithmetic Expressions are done in square brackets.</br>
+Size keywords like byte (word), dword have to be used if the size cannot be determined by the operands.</br>
+</p>
+</td>
+</tr>
 </table>
 
 As you might already guessed, these are just two ways of writting assembly code. The syntax you choose to go with is up 2 you (besides in this project). </br>

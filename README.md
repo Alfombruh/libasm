@@ -72,7 +72,10 @@ Here are some differneces between them:
             </p>
         </td>
         <td> 
-            <code>add esp, 24h</br>movsxd rax, ecv</br>paddd xmm2, xmm1</br>
+            <code>
+                add esp, 24h</br>
+                movsxd rax, ecv</br>
+                paddd xmm2, xmm1</br>
             </code>
             <p>
                 The parameter size is decided in the register that is being used. For example:</br>

@@ -37,7 +37,8 @@ I should also learn how to create .o files from a .s file. But we'll see</br>
 
 I dont have the slightest clue about how to call a function thats inside a .s file from a .c file, so gl with this
 
-## Learn how to properly code in assembly and all that :)
+## Learn how to properly code in assembly and all that :
+
 
 # What is the ASM Intel Syntax
 
@@ -59,9 +60,9 @@ Here are some differneces between them:
         <td> Parameter Size </td>
         <td> 
             <code> 
-                addl $0x24, %esp
-                movsql %ecx, %rax
-                paddd %xmm1, %xmm2
+addl $0x24, %esp</br>
+movsql %ecx, %rax</br>
+paddd %xmm1, %xmm2</br>
             </code>
             <p>
                 Mnemonics are suffixed with a letter depending on the size of the operands.</br> 

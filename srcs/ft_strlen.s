@@ -1,4 +1,4 @@
-.globl foo
+.globl ft_strlen
 
-foo:
+ft_strlen:
 	ret 

@@ -3,9 +3,11 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+#include "libasm.h"
+
 int main(int argc, char **argv){
 	(void) argc, (void) argv;
-	extern foo();
+	foo();
 	printf("libasm main!!!\n");
 	return (0);
 }

@@ -59,7 +59,7 @@ Here are some differneces between them:
 <tr>
 <td> Parameter Size </td>
 <td> 
-<div><code>addl $0x24, %esp 
+<div><code>addl $0x24, %esp\t
 movsql %ecx, %rax 
 paddd %xmm1, %xmm2 </code></div>
 <p>

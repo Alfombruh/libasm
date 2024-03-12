@@ -60,9 +60,9 @@ Here are some differneces between them:
         <td> Parameter Size </td>
         <td> 
             <code> 
-addl $0x24, %esp</br>
-movsql %ecx, %rax</br>
-paddd %xmm1, %xmm2</br>
+addl $0x24, %esp
+movsql %ecx, %rax
+paddd %xmm1, %xmm2
             </code>
             <p>
                 Mnemonics are suffixed with a letter depending on the size of the operands.</br> 

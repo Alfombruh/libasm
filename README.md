@@ -39,7 +39,7 @@ I dont have the slightest clue about how to call a function thats inside a .s fi
 
 ## Learn how to properly code in assembly and all that :)
 
-# <code> What is the ASM Intel Syntax </code>
+# What is the ASM Intel Syntax
 
 Well when you write code in assembly there are two main syntaxses you can use. You can either go with the Intel syntax, that is mainly use in Windows and DOS, or the AT&T syntax, which is mainly use in Unix enviroments since AT&T is the company behind Unix.</br>
 Here are some differneces between them:
@@ -72,10 +72,7 @@ Here are some differneces between them:
             </p>
         </td>
         <td> 
-            <code>
-                add esp, 24h</br>
-                movsxd rax, ecv</br>
-                paddd xmm2, xmm1</br>
+            <code>add esp, 24h</br>movsxd rax, ecv</br>paddd xmm2, xmm1</br>
             </code>
             <p>
                 The parameter size is decided in the register that is being used. For example:</br>
@@ -127,7 +124,7 @@ Here are some differneces between them:
 As you might already guessed, these are just two ways of writting assembly code. The syntax you choose to go with is up 2 you (besides in this project). </br>
 Many assemblers, like NASM, support the Intel syntax. Others, like GAS, which was originally created for AT&T syntax now, now supports both syntaxes via the <code>.intel_syntax</code> directive.
 
-# <code> Links </code>
+# Links
 
 [x86 Assembly language wikipedia page](https://en.wikipedia.org/wiki/X86_assembly_language)</br>
 [x86 Assembly architecture wikibook](https://en.wikibooks.org/wiki/X86_Assembly/X86_Architecture)</br>

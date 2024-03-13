@@ -39,7 +39,6 @@ I dont have the slightest clue about how to call a function thats inside a .s fi
 
 ## Learn how to properly code in assembly and all that :
 
-```test```
 
 # What is the ASM Intel Syntax
 
@@ -103,17 +102,13 @@ The assembler automatically detects the type of symbols. Whether they are regist
 Effective Addresses
 </td>
 <td>
-<code>
-movl offset(%ebx, %ecx, 4), %eax
-</code>
+<pre><code>movl offset(%ebx, %ecx, 4), %eax</code></pre>
 <p>
-General syntax of DISP(BASE, INDEX, SCALE)
+General syntax of DISP(BASE, INDEX, SCALE)</br></br></br>
 </p>
 </td>
 <td>
-<code>
-mov eax, [ebx, ecx*4 + offset]
-</code>
+<pre><code>mov eax, [ebx, ecx*4 + offset]</code></pre>
 <p>
 Arithmetic Expressions are done in square brackets.</br>
 Size keywords like byte (word), dword have to be used if the size cannot be determined by the operands.</br>
